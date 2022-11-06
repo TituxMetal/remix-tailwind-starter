@@ -1,0 +1,43 @@
+{
+  "author": "Titux Metal (DEV) <github@lgdweb.fr>",
+  "description": "Remix App starter with Tailwindcss",
+  "license": "MIT",
+  "name": "remix-tailwind-starter",
+  "private": true,
+  "repository": "https://github.com/TituxMetal/remix-tailwind-starter",
+  "sideEffects": false,
+  "version": "1.0.0",
+  "scripts": {
+    "build": "run-s \"build:*\"",
+    "build:css": "yarn generate:css --minify",
+    "build:remix": "remix build",
+    "dev": "run-p \"dev:*\"",
+    "dev:css": "yarn generate:css --watch",
+    "dev:remix": "remix dev",
+    "generate:css": "tailwindcss -o ./src/tailwind.css",
+    "start": "remix-serve build"
+  },
+  "dependencies": {
+    "@remix-run/node": "1.7.5",
+    "@remix-run/react": "1.7.5",
+    "@remix-run/serve": "1.7.5",
+    "isbot": "3.6.3",
+    "react": "18.2.0",
+    "react-dom": "18.2.0"
+  },
+  "devDependencies": {
+    "@remix-run/dev": "1.7.5",
+    "@remix-run/eslint-config": "1.7.5",
+    "@types/react": "18.0.25",
+    "@types/react-dom": "18.0.8",
+    "eslint": "8.26.0",
+    "npm-run-all": "4.1.5",
+    "prettier-plugin-tailwindcss": "0.1.13",
+    "tailwind-styled-components": "2.2.0",
+    "tailwindcss": "3.2.2",
+    "typescript": "4.7.4"
+  },
+  "engines": {
+    "node": ">=14"
+  }
+}
